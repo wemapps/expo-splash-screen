@@ -2,6 +2,7 @@ buildscript {
   repositories {
     google()
     mavenCentral()
+    maven { url "$rootDir/../node_modules/expo-module-scripts/android/maven" }
   }
   dependencies {
     classpath 'expo:expo-module-gradle-plugin:1.5.0'
