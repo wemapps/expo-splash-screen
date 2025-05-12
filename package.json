@@ -1,5 +1,5 @@
 {
-  "name": "expo-splash-screen",
+  "name": "expo-splash-screen-android-fixed",
   "version": "0.30.8",
   "description": "Provides a module to allow keeping the native Splash Screen visible until you choose to hide it.",
   "main": "build",
@@ -24,15 +24,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/expo/expo.git",
-    "directory": "packages/expo-splash-screen"
+    "url": "https://github.com/wemapps/expo-splash-screen.git"
   },
   "bugs": {
-    "url": "https://github.com/expo/expo/issues"
+    "url": "https://github.com/wemapps/expo-splash-screen/issues"
   },
   "author": "650 Industries, Inc.",
   "license": "MIT",
-  "homepage": "https://docs.expo.dev/versions/latest/sdk/splash-screen/",
+  "homepage": "https://github.com/wemapps/expo-splash-screen",
   "dependencies": {
     "@expo/prebuild-config": "^9.0.6"
   },
