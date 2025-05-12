@@ -52,6 +52,16 @@ object SplashScreenManager {
   }
 
   fun registerOnActivity(activity: Activity) {
+    if (activity == null) {
+      // Activity が null のときアプリを強制的に再起動
+      val currentContext = CurrentActivityProvider.getCurrentActivity()?.applicationContext
+      val packageManager = currentContext?.packageManager
+      val intent = packageManager?.getLaunchIntentForPackage(currentContext.packageName)
+      intent?.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+      currentContext?.startActivity(intent)
+      return
+    }
+    
     splashScreen = activity.installSplashScreen()
     ReactMarker.addListener(contentAppearedListener)
 
