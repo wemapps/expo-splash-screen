@@ -1,7 +1,15 @@
-plugins {
-  id 'com.android.library'
-  id 'expo-module-gradle-plugin'
+buildscript {
+  repositories {
+    google()
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'expo:expo-module-gradle-plugin:1.5.0'
+  }
 }
+
+apply plugin: 'com.android.library'
+apply plugin: 'expo-module-gradle-plugin'
 
 group = 'host.exp.exponent'
 version = '0.30.8'
